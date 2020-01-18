@@ -1,0 +1,23 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <%= link_to 'Sherlock', root_path, class: 'navbar-brand' %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <%= link_to 'About', about_path, class: 'nav-link'%>
+            <li class="nav-item">
+              <%= link_to 'Help', help_path, class: 'nav-link'%>
+          </li>
+           <li class="nav-item">
+             <%= link_to 'Login', '#', class: 'nav-link'%>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
