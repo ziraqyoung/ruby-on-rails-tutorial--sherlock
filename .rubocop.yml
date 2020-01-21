@@ -11,9 +11,9 @@ AllCops:
     - '**/tmp/**/*'
     - '**/vendor/**/*'
 
-Performance:
-  Exclude:
-    - '**/test/**/*'
+  # Performance:
+    # Exclude:
+    # - '**/test/**/*'
 
 # Prefer assert_not over assert !
 Rails/AssertNot:
