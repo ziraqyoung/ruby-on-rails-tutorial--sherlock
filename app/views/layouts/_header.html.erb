@@ -13,9 +13,21 @@
             <li class="nav-item">
               <%= link_to 'Help', help_path, class: 'nav-link'%>
           </li>
+          <% if logged_in? %>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href='#' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                 <%= link_to "Profile", current_user, class: 'dropdown-item' %>
+                 <%= link_to "settings", '#', class: 'dropdown-item' %>
+                 <hr class="divider"/>
+                 <%= link_to 'Logout', logout_path, method: :delete, class: 'dropdown-item' %>
+              </div>
+            </li>
+          <% else %>
            <li class="nav-item">
-             <%= link_to 'Login', '#', class: 'nav-link'%>
-          </li>
+             <%= link_to 'Login', login_path, class: 'nav-link'%>
+           </li>
+         <% end %>
         </ul>
       </div>
     </div>
