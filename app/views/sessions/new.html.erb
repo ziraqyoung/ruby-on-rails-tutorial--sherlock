@@ -15,6 +15,10 @@
       <div class="form-group">
         <%= f.submit 'Log in', class: 'form-control btn btn-primary' %>
       </div>
+        <%= f.label :remember_me, class: 'form-check inline p-0' do %>
+          <%= f.check_box :remember_me %>
+          <span class="pl-2 mt-n1 font-weight-bold">Remember me on this computer</span>
+        <% end %>
     <% end %>
     <p>New user? <%= link_to 'Sign up now', signup_path %></p>
   </div>
