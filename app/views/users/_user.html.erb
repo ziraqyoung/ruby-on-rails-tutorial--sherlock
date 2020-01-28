@@ -1,0 +1,14 @@
+<li class="list-group-item">
+  <div class="d-flex align-items-center">
+    <div>
+      <%= gravatar_for user, size: 50 %>
+    </div>
+    <div class="ml-4">
+      <%= link_to user.name, user, class: 'font-weight-bold' %>
+    </div>
+    <% if current_user.admin? && !current_user?(user) %>
+      <%= link_to 'delete', user, method: :delete, data: { confirm: 'Are you sure?' }, class: 'd-block btn btn-xs btn-danger ml-2' %>
+    <% end %>
+  </div>
+</li>
+
