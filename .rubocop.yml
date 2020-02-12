@@ -13,7 +13,7 @@ AllCops:
 
   # Performance:
     # Exclude:
-    # - '**/test/**/*'
+    - '**/test/**/*'
 
 # Prefer assert_not over assert !
 Rails/AssertNot:

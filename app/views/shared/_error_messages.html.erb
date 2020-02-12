@@ -1,8 +1,10 @@
 <% if @user.errors.any? %>
-    <h3 class="text-danger">The form contains <%= pluralize(@user.errors.count, 'error') %> errors</h3>
-    <ul class="list-group">
-      <% @user.errors.full_messages.each do |msg| %>
-        <li class="list-group-item list-group-item-danger"><%= msg %></li>
-      <% end %>
-    </ul>
+  <div class="error_explanation">
+   <h3 class="text-danger">The form contains <%= pluralize(@user.errors.count, 'error') %> errors</h3>
+   <ul class="list-group">
+     <% @user.errors.full_messages.each do |msg| %>
+       <li class="list-group-item list-group-item-danger"><%= msg %></li>
+        <% end %>
+      </ul>
+   </div>
 <% end %>
