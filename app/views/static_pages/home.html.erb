@@ -1,9 +1,22 @@
-
-<div class="home-wrapper">  
-  <div class="jumbotron center">
+<div class="home-wrapper">
+  <% if logged_in? %>
+  <div class="row">
+    <div class="col-sm-4">
+      <section class="user_info">
+        <%= render 'shared/user_info'%>
+      </section>
+      <section class="micropost-form">
+        <%= render 'shared/micropost_form'%>
+      </section>
+    </div> 
+    <%= render 'shared/feed' %>
+ </div>
+  <% else %>
+  <div class="mt-2 jumbotron center">
     <h1>Sherlock App</h1>
     <p>Welcome to Sherlock Application where users can publish microposts and follow users.</p>
     <hr>
     <%= link_to 'Sign up here', signup_path, class: 'btn btn-lg btn-primary' %>
   </div>
 </div>
+<% end %>
