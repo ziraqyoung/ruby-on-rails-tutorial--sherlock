@@ -1,0 +1,50 @@
+//General widget style
+$black: #000;
+$white: #fff;
+
+.card-widget {
+  border: 0;
+  position: relative;
+}
+
+//User Widget Style 1
+.widget-user {
+
+  height: 135px;
+  padding: 1rem;
+  text-align: center;
+
+
+  //User name
+  .widget-user-username {
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-shadow: 0 1px 1px rgba($black, .2);
+  }
+
+  //User single line description
+  .widget-user-desc {
+    margin-top: 0;
+  }
+
+  //User image container
+  .widget-user-image {
+    left: 50%;
+    margin-left: -45px;
+    position: absolute;
+    top: 80px;
+
+    > img {
+      border: 3px solid $white;
+      height: auto;
+      width: 90px;
+    }
+  }
+
+  .card-footer {
+    padding-top: 50px;
+  }
+}
+
